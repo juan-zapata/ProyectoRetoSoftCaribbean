@@ -1,8 +1,5 @@
 package com.retoTecnicoSoftCaribbean.CRUD_ArbolBinario.service;
 
-
-
-import com.retoTecnicoSoftCaribbean.CRUD_ArbolBinario.arbolBinario.Arbol;
 import com.retoTecnicoSoftCaribbean.CRUD_ArbolBinario.entity.Clientes;
 import com.retoTecnicoSoftCaribbean.CRUD_ArbolBinario.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,24 +16,20 @@ public class ClienteService{
     @Autowired
     ClienteRepository clienteRepository;
 
-
-
     public List<Clientes> list(){
         return clienteRepository.findAll();
     }
 
     public Optional<Clientes> getOne(int id){
-        return clienteRepository.findById(id);
+        return clienteRepository.findByNmcliente(id);
     }
 
     public void save(Clientes cliente){
         clienteRepository.save(cliente);
     }
+
     public void delete(int id){
-        clienteRepository.deleteById(id);
+        clienteRepository.deleteByNmcliente(id);
     }
 
-    public boolean existsById(int id){
-        return clienteRepository.existsById(id);
-    }
 }

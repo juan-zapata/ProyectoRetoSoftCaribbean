@@ -26,8 +26,6 @@ public class ClienteController {
     ClienteService clienteService;
     Arbol arbol = new Arbol();
 
-
-
     @Bean
     public ResponseEntity<List<Clientes>> cliente(){
         List<Clientes> list = clienteService.list();
@@ -48,6 +46,7 @@ public class ClienteController {
             return new ResponseEntity(new Mensaje("no existe un cliente con esa credencial"), HttpStatus.NOT_FOUND);
         return new ResponseEntity(arbol.buscarPorNmid(id).obtener(), HttpStatus.OK);
     }
+
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody ClienteDto clienteDto){
         if(StringUtils.isAnyBlank(clienteDto.getCus_dsnombres(), clienteDto.getCus_dsapellidos(), clienteDto.getCus_dsdireccion(), clienteDto.getCus_dscorreo(), clienteDto.getCus_cdtelefono(), clienteDto.getCus_cdtelefonoalter(),clienteDto.getCus_cdcelular(), clienteDto.getCus_dscargo(),  clienteDto.getCus_dsciudad(), clienteDto.getCus_genero(),clienteDto.getCus_dscomunidad(), clienteDto.getCus_dsempresalabora(),  clienteDto.getCus_dsdivision(), clienteDto.getCus_dspais(), clienteDto.getCus_hobbies()))

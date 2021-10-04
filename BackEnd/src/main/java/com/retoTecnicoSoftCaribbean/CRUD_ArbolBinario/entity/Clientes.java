@@ -4,18 +4,18 @@ package com.retoTecnicoSoftCaribbean.CRUD_ArbolBinario.entity;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Calendar;
 
 @Entity
 @Table(name = "tcus_clientes")
-public class Clientes {
+public class Clientes implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(unique = true)
-    private int cus_nmcliente;
+    private int nmcliente;
     @Column(length = 120)
     private String cus_dsnombres;
     @Column(length = 120)
@@ -60,9 +60,8 @@ public class Clientes {
 
     }
 
-    public Clientes(int cus_nmcliente, String cus_dsnombres, String cus_dsapellidos, String cus_dsdireccion, String cus_dscorreo, String cus_cdtelefono, String cus_cdtelefonoalter, String cus_cdcelular, int cus_nmcargo, String cus_dscargo, int cus_nmciudad, String cus_dsciudad, Calendar cus_fenacimiento, String cus_genero, int cus_nmcomunidad, String cus_dscomunidad, String cus_dsempresalabora, int cus_nmdivision, String cus_dsdivision, int cus_nmpais, String cus_dspais, String cus_hobbies, Timestamp cus_febaja, Timestamp cus_feregistro) {
-        this.id = id;
-        this.cus_nmcliente = cus_nmcliente;
+    public Clientes(int nmcliente, String cus_dsnombres, String cus_dsapellidos, String cus_dsdireccion, String cus_dscorreo, String cus_cdtelefono, String cus_cdtelefonoalter, String cus_cdcelular, int cus_nmcargo, String cus_dscargo, int cus_nmciudad, String cus_dsciudad, Calendar cus_fenacimiento, String cus_genero, int cus_nmcomunidad, String cus_dscomunidad, String cus_dsempresalabora, int cus_nmdivision, String cus_dsdivision, int cus_nmpais, String cus_dspais, String cus_hobbies, Timestamp cus_febaja, Timestamp cus_feregistro) {
+        this.nmcliente = nmcliente;
         this.cus_dsnombres = cus_dsnombres;
         this.cus_dsapellidos = cus_dsapellidos;
         this.cus_dsdireccion = cus_dsdireccion;
@@ -105,11 +104,11 @@ public class Clientes {
     }
 
     public int getCus_nmcliente() {
-        return cus_nmcliente;
+        return nmcliente;
     }
 
     public void setCus_nmcliente(int cus_nmcliente) {
-        this.cus_nmcliente = cus_nmcliente;
+        this.nmcliente = cus_nmcliente;
     }
 
     public String getCus_dsnombres() {

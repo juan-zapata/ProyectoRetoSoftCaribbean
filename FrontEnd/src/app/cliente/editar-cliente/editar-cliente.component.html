@@ -1,0 +1,34 @@
+<div class="container" *ngIf="cliente">
+    <div class="row-mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre del Cliente</label>
+                    <input type="text" class="form-control" id="cus_dsnombres" name="cus_dsnombres" 
+                    [(ngModel)]="cliente.cus_dsnombres" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Apellidos del Cliente</label>
+                    <input type="text" class="form-control" id="cus_dsapellidos" name="cus_dsapellidos" 
+                    [(ngModel)]="cliente.cus_dsapellidos" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">direccion</label>
+                    <input type="text" class="form-control" id="cus_dsdireccion" name="cus_dsdireccion" 
+                    [(ngModel)]="cliente.cus_dsdireccion" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Correo Electronico</label>
+                    <input type="text" class="form-control" id="cus_dscorreo" name="cus_dscorreo" 
+                    [(ngModel)]="cliente.cus_dscorreo" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Celular</label>
+                    <input type="text" class="form-control" id="cus_cdcelular" name="cus_cdcelular" 
+                    [(ngModel)]="cliente.cus_cdcelular" required>
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+            </form>
+        </div>
+    </div>
+</div>

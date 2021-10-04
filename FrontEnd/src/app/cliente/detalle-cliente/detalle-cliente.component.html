@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row mt-5" *ngIf="cliente">
+        <div class="col-md-4 mx-auto">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">
+                  Detalle Cliente
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><b>ID: </b>{{cliente.id}}</li>
+                  <li class="list-group-item"><b>Cedula: </b>{{cliente.cus_nmcliente}}</li>
+                  <li class="list-group-item"><b>Nombre: </b>{{cliente.cus_dsnombres}}</li>
+                  <li class="list-group-item"><b>Apellidos: </b>{{cliente.cus_dsapellidos}}</li>
+                  <li class="list-group-item"><b>direccion de residencia: </b>{{cliente.cus_dsdireccion}}</li>
+                  <li class="list-group-item"><b>Correo: </b>{{cliente.cus_dscorreo}}</li>
+                  <li class="list-group-item"><b>Telefono: </b>{{cliente.cus_cdtelefono}}</li>
+                  <li class="list-group-item"><b>Telefono Alternativo: </b>{{cliente.cus_cdtelefonoalter}}</li>
+                  <li class="list-group-item"><b>Celular: </b>{{cliente.cus_cdcelular}}</li>
+                  <li class="list-group-item"><b>Numero de Cargo: </b>{{cliente.cus_nmcargo}}</li>
+                  <li class="list-group-item"><b>Cargo: </b>{{cliente.cus_dscargo}}</li>
+                  <li class="list-group-item"><b>CodiGO Ciudad: </b>{{cliente.cus_nmciudad}}</li>
+                  <li class="list-group-item"><b>Ciudad de Residencia: </b>{{cliente.cus_dsciudad}}</li>
+                  <li class="list-group-item"><b>Fecha de Nacimiento: </b>{{cliente.cus_fenacimiento}}</li>
+                  <li class="list-group-item"><b>Genero: </b>{{cliente.cus_genero}}</li>
+                  <li class="list-group-item"><b>Codigo Comunidad: </b>{{cliente.cus_nmcomunidad}}</li>
+                  <li class="list-group-item"><b>Comunidad: </b>{{cliente.cus_dscomunidad}}</li>
+                  <li class="list-group-item"><b>Empresa Donde Labora: </b>{{cliente.cus_dsempresalabora}}</li>
+                  <li class="list-group-item"><b>Codigo Divisiom: </b>{{cliente.cus_nmdivision}}</li>
+                  <li class="list-group-item"><b>Division: </b>{{cliente.cus_dsdivision}}</li>
+                  <li class="list-group-item"><b>Codigo Pais: </b>{{cliente.cus_nmpais}}</li>
+                  <li class="list-group-item"><b>Pais: </b>{{cliente.cus_dspais}}</li>
+                  <li class="list-group-item"><b>Hobbies: </b>{{cliente.cus_hobbies}}</li>
+                  <li class="list-group-item"><b>Fecha de Baja: </b>{{cliente.cus_febaja}}</li>
+                  <li class="list-group-item"><b>Fecha de Registro: </b>{{cliente.cus_feregistro}}</li>
+                  <div class="card-footer">
+                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-undo-alt"></i>Regresar</button>
+                </div> 
+                </ul>
+              </div>
+        </div>
+    </div>
+</div>

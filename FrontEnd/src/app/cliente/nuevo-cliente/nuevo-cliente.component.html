@@ -1,0 +1,133 @@
+<div class="container">
+    <div class="row-mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">Numero de Documento</label>
+                    <input type="number" class="form-control" id="cus_nmcliente" name="cus_nmcliente" 
+                    [(ngModel)]="cus_nmcliente" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre del Cliente</label>
+                    <input type="text" class="form-control" id="cus_dsnombres" name="cus_dsnombres" 
+                    [(ngModel)]="cus_dsnombres" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Apellidos del Cliente</label>
+                    <input type="text" class="form-control" id="cus_dsapellidos" name="cus_dsapellidos" 
+                    [(ngModel)]="cus_dsapellidos" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">direccion</label>
+                    <input type="text" class="form-control" id="cus_dsdireccion" name="cus_dsdireccion" 
+                    [(ngModel)]="cus_dsdireccion" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Correo Electronico</label>
+                    <input type="text" class="form-control" id="cus_dscorreo" name="cus_dscorreo" 
+                    [(ngModel)]="cus_dscorreo" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Telefono</label>
+                    <input type="text" class="form-control" id="cus_cdtelefono" name="cus_cdtelefono" 
+                    [(ngModel)]="cus_cdtelefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Telefono Alternativo</label>
+                    <input type="text" class="form-control" id="cus_cdtelefonoalter" name="cus_cdtelefonoalter" 
+                    [(ngModel)]="cus_cdtelefonoalter" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Celular</label>
+                    <input type="text" class="form-control" id="cus_cdcelular" name="cus_cdcelular" 
+                    [(ngModel)]="cus_cdcelular" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Numero de Cargo</label>
+                    <input type="number" class="form-control" id="cus_nmcargo" name="cus_nmcargo" 
+                    [(ngModel)]="cus_nmcargo" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre del cargo</label>
+                    <input type="text" class="form-control" id="cus_dscargo" name="cus_dscargo" 
+                    [(ngModel)]="cus_dscargo" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Codigo de Ciudad</label>
+                    <input type="number" class="form-control" id="cus_nmciudad" name="cus_nmciudad" 
+                    [(ngModel)]="cus_nmciudad" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Ciudad</label>
+                    <input type="text" class="form-control" id="cus_dsciudad" name="cus_dsciudad" 
+                    [(ngModel)]="cus_dsciudad" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="cus_fenacimiento" name="cus_fenacimiento" 
+                    [(ngModel)]="cus_fenacimiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Genero</label>
+                    <select name="select">
+                        <option value="value1">M</option>
+                        <option value="value3">F</option>
+                      </select>
+                    <input type="text" class="form-control" id="cus_genero" name="cus_genero" 
+                    [(ngModel)]="cus_genero" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Numero de Comunidad</label>
+                    <input type="number" class="form-control" id="cus_nmcomunidad" name="cus_nmcomunidad" 
+                    [(ngModel)]="cus_nmcomunidad" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre de la Comunidad</label>
+                    <input type="text" class="form-control" id="cus_dscomunidad" name="cus_dscomunidad" 
+                    [(ngModel)]="cus_dscomunidad" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Empresa donde Labora</label>
+                    <input type="text" class="form-control" id="cus_dsempresalabora" name="cus_dsempresalabora" 
+                    [(ngModel)]="cus_dsempresalabora" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Numero de devision</label>
+                    <input type="number" class="form-control" id="cus_nmdivision" name="cus_nmdivision" 
+                    [(ngModel)]="cus_nmdivision" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">division</label>
+                    <input type="text" class="form-control" id="cus_dsdivision" name="cus_dsdivision" 
+                    [(ngModel)]="cus_dsdivision" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Codigo de Pais</label>
+                    <input type="number" class="form-control" id="cus_nmpais" name="cus_nmpais" 
+                    [(ngModel)]="cus_nmpais" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Pais</label>
+                    <input type="text" class="form-control" id="cus_dspais" name="cus_dspais" 
+                    [(ngModel)]="cus_dspais" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Hobbies</label>
+                    <input type="text" class="form-control" id="cus_hobbies" name="cus_hobbies" 
+                    [(ngModel)]="cus_hobbies" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Fecha de Baja</label>
+                    <input type="date" class="form-control" id="cus_febaja" name="cus_febaja" 
+                    [(ngModel)]="cus_febaja" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Fecha de registro</label>
+                    <input type="date" class="form-control" id="cus_feregistro" name="cus_feregistro" 
+                    [(ngModel)]="cus_feregistro" required>
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Registrar Cliente</button>
+            </form>
+        </div>
+    </div>
+</div>

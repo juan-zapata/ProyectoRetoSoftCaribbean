@@ -1,0 +1,30 @@
+<div class="table-responsive">
+    <table class="table align-middle">
+    <thead>
+      <tr>
+        <th scope="col">Cedula</th>
+        <th scope="col">Nombres</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Celular</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Ver</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of cliente">
+        <td>{{cliente.cus_nmcliente}} </td>
+        <td>{{cliente.cus_dsnombres}} </td>
+        <td>{{cliente.cus_dsapellidos}} </td>
+        <td>{{cliente.cus_dscorreo}} </td>
+        <td>{{cliente.cus_cdtelefono}} </td>
+        <td>{{cliente.cus_cdcelular}} </td>
+        <td><button class="btn btn_outline-warning" routerLink="/editar/{{cliente.cus_nmcliente}} "><i class="fas fa-user-edit"></i> Editar</button></td>
+        <td><button class="btn btn_outline-primary" routerLink="/detalle/{{cliente.cus_nmcliente}} "><i class="far fa-eye"></i> Ver</button></td>
+        <td><button class="btn btn_outline-danger" (click)="borrar(cliente.cus_nmcliente)"><em class="fas fa-trash-alt"></em> Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
